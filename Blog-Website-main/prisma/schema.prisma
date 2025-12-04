@@ -31,7 +31,8 @@ model Bejegyzes {
   userId      Int
   createdAt   DateTime    @default(now())
 
-  felhasznalo Felhasznalo @relation(fields: [userId], references: [id])
+  felhasznalo Felhasznalo @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
+
 
 
